@@ -75,17 +75,17 @@
             <hr class="col-12">
             <div class="col-12">
               <h5 class="text-left"><b>Estimaciones: </b></h5>
-              <p>Requiere un total de {{ 9.5 - total }} puntos para pasar la asignatura</p>
+              <p>Requiere un total de {{ 9.5 - total }} puntos para aprobar la asignatura</p>
               <template v-if="validate2">
-                <p>Recomendamos sacar estas notas para poder pasar la materia:</p>
+                <p>Recomendamos sacar estas notas para poder aprobar la asignatura:</p>
                 <ul>
                   <li v-for="note in estimated">
-                    <p>En la evaluación # {{ note.evaluation + 1 }} deberá sacar una nota igual o mayor a {{ note.note }} puntos</p>
+                    <p>En la evaluación #{{ note.evaluation + 1 }} deberá sacar una nota igual o mayor a {{ note.note }} puntos</p>
                   </li>
                 </ul>
               </template>
               <template v-else>
-                <p>Lo sentimos, según nuestros cálculos, usted no podrá aprobar la materia.</p>
+                <p>Lo sentimos, según nuestros cálculos, usted no podrá aprobar la asignatura.</p>
               </template>
             </div>
           </template>
