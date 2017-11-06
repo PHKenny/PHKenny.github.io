@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-  <title>Calculador de notas</title>
+  <title>Calculador de calificaciones</title>
+  <meta name="author" content="Kenny Mochizuki" />
+  <meta name="keywords" content="calificaciones, notas, evaluacion, universidad, evaluaciones, puntos" />
+  <meta name="description" content="Sistema automatizado de cálculo de notas para las evaluaciones de un semestre universitario" />
+
   <link rel="stylesheet" href="assets/stylesheets/bootstrap.min.css" />
   <link rel="stylesheet" href="assets/stylesheets/now-ui.css" />
   <link rel="stylesheet" href="assets/stylesheets/app.css" />
@@ -12,7 +16,7 @@
   <div class="container" id="main">
     <div class="row">
       <div class="col-12">
-        <h1 class="text-center" style="margin: 0 !important;">Calculador de notas</h1>
+        <h1 class="text-center" style="margin: 0 !important;">Calculador de calificaciones</h1>
       </div>
       <hr class="col-12">
       <div class="col-12">
@@ -45,7 +49,7 @@
               <tr>
                 <th class="text-center">#</th>
                 <th class="text-center">Porcentaje</th>
-                <th class="text-center">Nota</th>
+                <th class="text-center">Calificación</th>
                 <th class="text-center">Puntaje</th>
               </tr>
             </thead>
@@ -65,7 +69,7 @@
               </template>
               <template v-else>
                 <tr>
-                  <td colspan="4">No hay notas cargadas</td>
+                  <td colspan="4">No hay calificaciones cargadas...</td>
                 </tr>
               </template>
             </tbody>
@@ -75,12 +79,12 @@
             <hr class="col-12">
             <div class="col-12">
               <h5 class="text-left"><b>Estimaciones: </b></h5>
-              <p>Requiere un total de {{ 9.5 - total }} puntos para aprobar la asignatura</p>
+              <p>Requiere un total de {{ 9.5 - total }} puntos para aprobar la asignatura.</p>
               <template v-if="validate2">
-                <p>Recomendamos sacar estas notas para poder aprobar la asignatura:</p>
+                <p>Recomendamos sacar estas calificaciones para poder aprobar la asignatura:</p>
                 <ul>
                   <li v-for="note in estimated">
-                    <p>En la evaluación #{{ note.evaluation + 1 }} deberá sacar una nota igual o mayor a {{ note.note }} puntos</p>
+                    <p>En la evaluación #{{ note.evaluation + 1 }} deberá sacar una calificación igual o mayor a {{ note.note }} puntos.</p>
                   </li>
                 </ul>
               </template>
