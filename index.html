@@ -22,8 +22,8 @@
       <div class="col-12">
         <h5><b>Recomendaciones para su uso:</b></h5>
         <ul>
-          <li>Al modificar cada nota, debe presionar enter para poder actualizar la información</li>
-          <li>Verificar bien los porcentajes ingresados, en caso de error, deberá volver a cargar todas las evaluaciones</li>
+          <li class="text-justify">Al modificar cada calificación, debe presionar enter para poder actualizar la información.</li>
+          <li class="text-justify">Verificar bien los porcentajes ingresados, en caso de error, deberá volver a cargar todas las evaluaciones.</li>
         </ul>
       </div>
       <hr class="col-12">
@@ -79,17 +79,17 @@
             <hr class="col-12">
             <div class="col-12">
               <h5 class="text-left"><b>Estimaciones: </b></h5>
-              <p>Requiere un total de {{ 9.5 - total }} puntos para aprobar la asignatura.</p>
+              <p class="text-justify">Requiere un total de {{ 9.5 - total }} puntos para aprobar la asignatura.</p>
               <template v-if="validate2">
-                <p>Recomendamos sacar estas calificaciones para poder aprobar la asignatura:</p>
+                <p class="text-justify">Recomendamos sacar estas calificaciones para poder aprobar la asignatura:</p>
                 <ul>
                   <li v-for="note in estimated">
-                    <p>En la evaluación #{{ note.evaluation + 1 }} deberá sacar una calificación igual o mayor a {{ note.note }} puntos.</p>
+                    <p class="text-justify">En la evaluación #{{ note.evaluation + 1 }} deberá sacar una calificación igual o mayor a {{ note.note }} puntos.</p>
                   </li>
                 </ul>
               </template>
               <template v-else>
-                <p>Lo sentimos, según nuestros cálculos, usted no podrá aprobar la asignatura.</p>
+                <p class="text-justify">Lo sentimos, según nuestros cálculos, usted no podrá aprobar la asignatura.</p>
               </template>
             </div>
           </template>
